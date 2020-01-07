@@ -16,7 +16,7 @@
 
 <launch>
   <param name="robot_description"
-    textfile="$(find cartographer_ros)/urdf/iCrane_2d.urdf" />
+    textfile="$(find cartographer_ros)/urdf/quanergy_2d.urdf" />
 
   <node name="robot_state_publisher" pkg="robot_state_publisher"
     type="robot_state_publisher" />
@@ -24,15 +24,12 @@
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory $(find cartographer_ros)/configuration_files
-          -configuration_basename iCrane_2d.lua"
+          -configuration_basename quanergy_2d.lua"
       output="screen">
-    <remap from="echoes" to="horizontal_laser_2d" />
   </node>
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
       type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
-
-  /* <node pkg="tf" type="static_transform_publisher" name="static_transform_publisher3" args="0 0 0.3 0 0 0 1 base_link Sensor 100"/> */
 
   <node name="rviz" pkg="rviz" type="rviz" required="true"                  
       args="-d $(find cartographer_ros)/configuration_files/quanergy_2d.rviz" />
