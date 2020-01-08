@@ -30,9 +30,9 @@
 
   <link name="base_link">
     <visual>
-      <origin xyz="0.0 0 0.25" />
+      <origin xyz="0.0 0 0.3" />
       <geometry>
-        <box size="0.5 0.5 0.5" />
+        <box size="0.5 0.392 0.60" />
       </geometry>
       <material name="white" />
     </visual>
@@ -40,9 +40,9 @@
 
   <link name="Sensor">
     <visual>
-      <origin xyz="0 0 0.55" />
+      <origin xyz="0.195 0 0.655" />
       <geometry>
-        <cylinder length="0.1" radius="0.06" />
+        <cylinder length="0.11" radius="0.055" />
       </geometry>
       <material name="black" />
     </visual>
