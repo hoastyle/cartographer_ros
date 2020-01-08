@@ -21,14 +21,36 @@
   <material name="gray">
     <color rgba="0.2 0.2 0.2 1" />
   </material>
+  <material name="black">
+    <color rgba="0 0 0 0.95" />
+  </material>
+  <material name="white">
+    <color rgba="1 1 1 1" />
+  </material>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0.0 0 0.25" />
+      <geometry>
+        <box size="0.5 0.5 0.5" />
+      </geometry>
+      <material name="white" />
+    </visual>
+  </link>
 
   <link name="Sensor">
     <visual>
-      <origin xyz="0 0 0" />
+      <origin xyz="0 0 0.55" />
       <geometry>
-        <box size="0.06 0.04 0.02" />
+        <cylinder length="0.1" radius="0.06" />
       </geometry>
-      <material name="orange" />
+      <material name="black" />
     </visual>
   </link>
+
+  <joint name="Sensor_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="Sensor" />
+    <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
+  </joint>
 </robot>
