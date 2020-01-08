@@ -31,12 +31,4 @@
       <material name="orange" />
     </visual>
   </link>
-
-  <link name="base_link" />
-
-  <joint name="Sensor_joint" type="fixed">
-    <parent link="base_link" />
-    <child link="Sensor" />
-    <origin xyz="0 0 0" />
-  </joint>
 </robot>

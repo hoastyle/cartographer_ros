@@ -67,14 +67,14 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        base_link:
-          Value: true
+        # base_link:
+          # Value: true
         Sensor:
           Value: true
         map:
           Value: true
-        odom:
-          Value: true
+        # odom:
+          # Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
@@ -82,8 +82,8 @@ Visualization Manager:
       Show Names: true
       Tree:
         map:
-          odom:
-            base_link:
+          # odom:
+            # base_link:
               Sensor:
                 {}
       Update Interval: 0
